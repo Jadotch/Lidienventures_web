@@ -1,82 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Color Connect Craft - Clean Energy</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Color Connect Craft | Clean Energy Solutions</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-    <div class="logo">Color Connect Craft</div>
-    <nav class="nav">
-      <ul>
-        <li><a href="#">Solutions ▼</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Insights</a></li>
-        <li><a href="#">Conversations</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="utility">
-      <a href="#">Search</a> | 
-      <a href="#">My Account</a> | 
-      <a href="#" class="icon-cart">Cart</a> | 
-      <a href="#" class="icon-language">Language</a>
-    </div>
-    <a href="#" class="cta-btn">Get a Quote</a>
-  </header>
 
-    <section class="hero">
-    <div class="hero-image">
-      <img src="assets/solar-farm.jpg" alt="Solar farm at sunrise">
-    </div>
-    <div class="hero-text">
-      <h1>Clean Energy. Trusted Supplies. Smarter Future.</h1>
-      <p>From LPG and solar to biogas and boreholes — we power homes, farms, and businesses with affordable, safe, and sustainable energy.</p>
-      <div class="hero-cta">
-        <a href="#" class="btn">Shop Supplies</a>
-        <a href="#" class="btn secondary">Request a Quote</a>
-      </div>
-    </div>
-  </section>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo"><a href="#"><span>Color</span> Connect <span>Craft</span></a></div>
 
-    <section class="solutions">
-    <h2>Our Green Energy Solutions</h2>
-    <div class="solutions-grid">
-      <div class="card">
-        <img src="assets/lpg-cylinder.jpg" alt="Close-up LPG cylinder with label">
-        <h3>LPG Distribution</h3>
-        <p>Safe refills, reliable delivery.</p>
-        <a href="#" class="btn small">Shop Now</a>
-      </div>
-      <div class="card">
-        <img src="assets/solar-farm.jpg" alt="Solar energy installation">
-        <h3>Solar Energy</h3>
-        <p>Home systems, boreholes & commercial setups.</p>
-        <a href="#" class="btn small">Request Quote</a>
-      </div>
-      <div class="card">
-        <img src="assets/family-cooking-lpg.jpg" alt="Biogas cooking family">
-        <h3>Biogas Solutions</h3>
-        <p>Clean cooking from farm waste.</p>
-        <a href="#" class="btn small">Learn More</a>
-      </div>
-      <div class="card">
-        <img src="assets/borehole-drilling.jpg" alt="Solar borehole project">
-        <h3>Solar Boreholes</h3>
-        <p>Sustainable water for communities.</p>
-        <a href="#" class="btn small">Explore Solutions</a>
-      </div>
-    </div>
-  </section>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="menu">
+          <li class="has-sub">Solutions
+            <ul class="sub">
+              <li><a href="#solutions" data-target="LPG">LPG</a></li>
+              <li><a href="#solutions" data-target="Solar">Solar</a></li>
+              <li><a href="#solutions" data-target="Biogas">Biogas</a></li>
+              <li><a href="#solutions" data-target="Borehole">Boreholes</a></li>
+            </ul>
+          </li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#conversations">Conversations</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-    <footer class="footer">
-    <p>&copy; 2025 Color Connect Craft. All rights reserved.</p>
-  </footer>
+      <div class="utility">
+        <button class="icon-btn" title="Search">🔍</button>
+        <button class="icon-btn" title="My account">👤</button>
+        <button class="icon-btn" title="Cart">🛒</button>
+        <select class="lang">
+          <option>EN</option>
+          <option>SW</option>
+        </select>
+        <a class="btn-quote" href="#quote-form">Get a Quote</a>
+      </div>
+    </div>
+  </header>
 
-  <script src="script.js"></script>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <h1>Clean Energy. Trusted Supplies. Smarter Future.</h1>
+        <p>From LPG and solar to biogas and boreholes — we power homes, farms, and businesses with affordable, safe, and sustainable energy.</p>
+
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#shop">Shop Supplies</a>
+          <a class="btn btn-outline" href="#quote-form">Request a Quote</a>
+        </div>
+
+        <!-- quick mini calculator -->
+        <div class="mini-calculator">
+          <label for="mini-type">Select:</label>
+          <select id="mini-type">
+            <option>LPG</option>
+            <option>Solar</option>
+            <option>Borehole</option>
+            <option>Biogas</option>
+          </select>
+
+          <label for="mini-size">Household / Business size</label>
+          <input id="mini-size" type="number" placeholder="e.g. 4 or 50 (employees)" />
+
+          <button id="mini-calc" class="btn small">Estimate</button>
+
+          <div id="mini-output" class="mini-output" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- Split visual: left solar+borehole / right family LPG -->
+        <div class="split-visual">
+          <img src="assets/solar-farm.jpg" alt="Solar farm at sunrise" class="split-left">
+          <img src="assets/family-lpg.jpg" alt="Family cooking with LPG" class="split-right">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS SHOWCASE -->
+  <section id="solutions" class="section solutions-section">
+    <div class="container">
+      <h2>Green Energy Supplies</h2>
+      <div class="solutions-grid">
+        <article class="solution-card">
+          <img src="assets/lpg-close.jpg" alt="LPG cylinder closeup">
+          <h3>LPG Distribution</h3>
+          <p>Safe refills, reliable delivery.</p>
+          <a class="btn" href="#shop">Shop Now</a>
+        </article>
+
+        <article class="solution-card">
+          <img src="assets/solar-farm.jpg" alt="Solar installation">
+          <h3>Solar Energy</h3>
+          <p>Home systems, boreholes & commercial setups.</p>
+          <a class="btn" href="#quote-form">Request Quote</a>
+        </article>
+
+        <article class="solution-card">
+          <img src="assets/borehole-rig.jpg" alt="Borehole drilling">
+          <h3>Biogas Solutions</h3>
+          <p>Clean cooking from farm waste.</p>
+          <a class="btn" href="#insights">Learn More</a>
+        </article>
+
+        <article class="solution-card">
+          <img src="assets/borehole-rig-2.jpg" alt="Solar borehole">
+          <h3>Solar Boreholes</h3>
+          <p>Sustainable water for communities.</p>
+          <a class="btn" href="#quote-form">Explore</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section id="insights" class="section insights">
+    <div class="container">
+      <h2>Your Green Energy Knowledge Center</h2>
+      <div class="tiles">
+        <article class="tile">
+          <h4>Solar Boreholes: What Farmers Should Know</h4>
+          <p>A practical guide for rural water systems.</p>
+        </article>
+        <article class="tile">
+          <h4>Village Transformed by Biogas Cooking</h4>
+          <p>Case study showing cost & health benefits.</p>
+        </article>
+        <article class="tile">
+          <h4>Future of LPG Distribution in Africa</h4>
+          <p>Whitepaper on distribution models & safety.</p>
+        </article>
+      </div>
+
+      <div class="impact-strip">
+        <div class="impact-item"><strong id="co2-count">—</strong><span>kg CO₂ saved</span></div>
+        <div class="impact-item"><strong id="households-count">—</strong><span>households reached</span></div>
+        <div class="impact-item"><strong id="water-count">—</strong><span>litres pumped</span></div>
+      </div>
+
+      <a class="btn" href="#insights">Visit Insights Hub</a>
+    </div>
+  </section>
+
+  <!-- CONVERSATIONS -->
+  <section id="conversations" class="section conversations">
+    <div class="container">
+      <h2>Join the Green Energy Conversation</h2>
+      <div class="panels">
+        <div class="panel">
+          <h4>Upcoming Webinar</h4>
+          <p>Biogas for Smallholder Farmers</p>
+          <a class="btn small" href="#insights">Register</a>
+        </div>
+        <div class="panel">
+          <h4>Community Forum</h4>
+          <p>Q&A highlights: LPG safety, solar ROI</p>
+          <a class="btn small" href="#conversations">Join Discussion</a>
+        </div>
+        <div class="panel">
+          <h4>Poll</h4>
+          <p>Which solution should expand next?</p>
+          <a class="btn small" href="#conversations">Vote Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="section trust">
+    <div class="container trust-grid">
+      <div class="trust-item"><img src="assets/solar-farm.jpg" alt="cert" style="width:48px;"><p>Certified Installers</p></div>
+      <div class="trust-item"><img src="assets/family-lpg.jpg" alt="support" style="width:48px;"><p>24/7 Support</p></div>
+      <div class="trust-item"><img src="assets/borehole-rig.jpg" alt="pricing" style="width:48px;"><p>Transparent Pricing</p></div>
+      <div class="trust-item"><img src="assets/lpg-close.jpg" alt="safety" style="width:48px;"><p>Safety Guaranteed</p></div>
+    </div>
+  </section>
+
+  <!-- STORIES -->
+  <section class="section stories">
+    <div class="container">
+      <h2>Customer Stories</h2>
+      <div class="carousel" id="carousel">
+        <div class="story"><blockquote>“We save $40/month with LPG.” <cite>– Amina, Aden</cite></blockquote></div>
+        <div class="story"><blockquote>“Our solar borehole serves 300 households.” <cite>– Ali, Lahj</cite></blockquote></div>
+        <div class="story"><blockquote>“Biogas cut our firewood use to zero.” <cite>– Mariam, Ta’izz</cite></blockquote></div>
+      </div>
+      <div class="carousel-controls">
+        <button id="prev">◀</button>
+        <button id="next">▶</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE FORM -->
+  <section id="quote-form" class="section quote-form">
+    <div class="container">
+      <h2>Request a Quote</h2>
+      <form id="requestQuote" class="form-quote" novalidate>
+        <input id="qName" type="text" placeholder="Full name" required>
+        <input id="qEmail" type="email" placeholder="Email address" required>
+        <input id="qPhone" type="tel" placeholder="Phone number" required>
+        <select id="qSolution" required>
+          <option value="">Select solution</option>
+          <option>LPG</option>
+          <option>Solar</option>
+          <option>Biogas</option>
+          <option>Borehole</option>
+        </select>
+        <textarea id="qNotes" rows="4" placeholder="Project size / details (optional)"></textarea>
+        <button type="submit" class="btn">Submit Request</button>
+        <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to power your future with clean energy?</h2>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="#shop">Shop Now</a>
+        <a class="btn btn-outline" href="#quote-form">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>© <span id="year"></span> Color Connect Craft. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#solutions">Solutions</a> · <a href="#shop">Shop</a> · <a href="#insights">Insights</a> · <a href="#conversations">Conversations</a>
+      </div>
+      <div class="newsletter">
+        <input id="newsletterEmail" type="email" placeholder="Enter your email">
+        <button id="newsletterBtn" class="btn small">Subscribe</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
 
