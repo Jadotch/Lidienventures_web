@@ -10,18 +10,6 @@ function calculate() {
 
 document.getElementById('requestQuote').addEventListener('submit', function(e){
   e.preventDefault();
-  const name = document.getElementById('qName').value.trim();
-  const email = document.getElementById('qEmail').value.trim();
-  const phone = document.getElementById('qPhone').value.trim();
-  const solution = document.getElementById('qSolution').value;
-  const notes = document.getElementById('qNotes').value.trim();
-
-  if(name && email && phone && solution){
-    document.getElementById('formMessage').innerText = 
-      `Thank you ${name}, your request for ${solution} has been received!`;
-    document.getElementById('requestQuote').reset();
-  } else {
-    document.getElementById('formMessage').innerText = 
-      "Please fill in all required fields.";
-  }
+  document.getElementById('formMessage').innerText = 
+    "✅ Thank you! We'll get back to you shortly.";
 });
