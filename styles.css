@@ -1,302 +1,127 @@
-/* ===== General Reset ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
-  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
   color: #333;
-  line-height: 1.6;
-  background-color: #f5f7f8;
+  background-color: #f8f8f8;
 }
 
-/* ===== Header & Nav ===== */
-header {
-  background: #1E7F4C;
-  color: white;
-  padding: 1rem 2rem;
+.header {
   position: sticky;
   top: 0;
-  z-index: 1000;
-}
-header nav {
+  background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.logo h2 {
-  font-family: 'Montserrat', sans-serif;
-}
-.menu {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-}
-.menu li {
-  position: relative;
-  cursor: pointer;
-}
-.menu li ul {
-  display: none;
-  position: absolute;
-  background: #fff;
-  color: #333;
-  list-style: none;
-  padding: 0.5rem;
-  border-radius: 4px;
-}
-.menu li:hover ul {
-  display: block;
-}
-.utility {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-.utility .cta {
-  background: #FFD700;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 10px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* ===== Hero Section ===== */
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(120deg, #1E7F4C, #3BB78F);
-  color: white;
-}
-.hero h1 {
-  font-size: 2.5rem;
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 1rem;
-}
-.hero p {
-  max-width: 700px;
-  margin: 0 auto 2rem;
-}
-.hero-buttons button {
-  margin: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.hero-buttons .shop {
-  background: #FFD700;
-}
-.hero-buttons .quote {
-  background: #fff;
-  color: #1E7F4C;
-}
-
-/* ===== Calculator ===== */
-.calculator {
-  background: #fff;
-  padding: 3rem 2rem;
-  text-align: center;
-}
-.calculator h2 {
-  margin-bottom: 1rem;
-}
-.calculator select, 
-.calculator input {
-  margin: 0.5rem;
-  padding: 0.5rem;
-}
-.calculator button {
-  background: #1E7F4C;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
-}
-.output {
-  margin-top: 1rem;
+.logo {
   font-weight: bold;
-  color: #1E7F4C;
+  font-size: 1.2rem;
+  color: #2c7a2c;
 }
 
-/* ===== Solutions Showcase ===== */
-.solutions {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  padding: 3rem 2rem;
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
 }
-.solution-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+.nav a {
+  text-decoration: none;
+  color: #333;
 }
-.solution-card img {
-  border-radius: 50%;
-  margin-bottom: 1rem;
+
+.utility {
+  font-size: 0.9rem;
+  margin-right: 20px;
 }
-.solution-card button {
-  background: #1E7F4C;
+
+.cta-btn {
+  background: #2c7a2c;
   color: #fff;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-/* ===== Insights Hub ===== */
-.insights {
-  padding: 3rem 2rem;
-  background: #f0faf5;
-  text-align: center;
-}
-.tiles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
-.tile {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* ===== Conversations ===== */
-.conversations {
-  padding: 3rem 2rem;
-  text-align: center;
-}
-.panels {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-.panel {
-  flex: 1 1 250px;
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* ===== Trust & Safety ===== */
-.trust {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 2rem;
-  background: #1E7F4C;
-  color: white;
-}
-.trust .icon {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-/* ===== Customer Stories ===== */
-.stories {
-  padding: 3rem 2rem;
-  text-align: center;
-}
-.carousel {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  padding: 1rem;
-}
-.story {
-  min-width: 250px;
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* ===== Quote Form ===== */
-.quote-form {
-  background: #f0faf5;
-  padding: 3rem 2rem;
-  text-align: center;
-}
-.quote-form form {
-  max-width: 500px;
-  margin: auto;
+.hero {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-.quote-form input, 
-.quote-form select, 
-.quote-form textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.quote-form button {
-  background: #1E7F4C;
-  color: white;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-#formMessage {
-  margin-top: 1rem;
-  font-weight: bold;
-  color: #1E7F4C;
+  text-align: center;
+  padding: 40px 20px;
+  background: #e6f7e6;
 }
 
-/* ===== Final CTA ===== */
-.cta-banner {
-  padding: 2rem;
-  background: #3BB78F;
-  color: white;
-  text-align: center;
-}
-.cta-banner button {
-  margin: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.cta-banner .shop {
-  background: #FFD700;
-  color: #333;
-}
-.cta-banner .quote {
-  background: white;
-  color: #1E7F4C;
+.hero img {
+  max-width: 45%;
+  margin: 10px;
+  border-radius: 8px;
 }
 
-/* ===== Footer ===== */
-footer {
-  background: #1E7F4C;
-  color: white;
-  padding: 2rem;
-  text-align: center;
+.hero-text {
+  margin-top: 20px;
 }
-footer a {
-  color: #FFD700;
-  margin: 0 0.5rem;
+
+.hero h1 {
+  font-size: 2rem;
+  color: #2c7a2c;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.btn {
+  background: #2c7a2c;
+  color: white;
+  padding: 10px 20px;
   text-decoration: none;
+  border-radius: 6px;
+  margin: 5px;
+  display: inline-block;
 }
-footer input {
-  padding: 0.5rem;
-  border-radius: 4px;
-  border: none;
-  margin-right: 0.5rem;
+
+.btn.secondary {
+  background: #555;
 }
-footer button {
-  background: #FFD700;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
+
+.solutions {
+  padding: 50px 20px;
+  text-align: center;
 }
+
+.solutions h2 {
+  margin-bottom: 30px;
+  color: #2c7a2c;
+}
+
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.footer {
+  background: #2c7a2c;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
