@@ -1,196 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Color Connect Craft | Clean Energy Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Connect Craft</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header class="header">
+        <div class="logo">Color Connect Craft</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Solutions ▼</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Insights</a></li>
+                <li><a href="#">Conversations</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="utility">
+            <a href="#">Search</a> | 
+            <a href="#">My Account</a> | 
+            <a href="#">🛒 Cart</a> | 
+            <a href="#">🌐 Language</a>
+        </div>
+        <a href="#" class="cta-btn">Get a Quote</a>
+    </header>
 
-<!-- ===== Header ===== -->
-<header>
-  <nav>
-    <div class="logo"><h2>Color Connect Craft</h2></div>
-    <ul class="menu">
-      <li>Solutions
-        <ul>
-          <li>LPG</li>
-          <li>Solar</li>
-          <li>Biogas</li>
-          <li>Boreholes</li>
-        </ul>
-      </li>
-      <li>Shop</li>
-      <li>Insights</li>
-      <li>Conversations</li>
-      <li>About Us</li>
-      <li>Contact</li>
-    </ul>
-    <div class="utility">
-      <span>🔍</span>
-      <span>👤</span>
-      <span>🛒</span>
-      <span>🌐</span>
-      <button class="cta">Get a Quote</button>
-    </div>
-  </nav>
-</header>
+    <section class="hero">
+        <div class="hero-image">
+            <img src="assets/solar-farm.jpg" alt="A beautiful solar farm at sunrise">
+        </div>
+        <div class="hero-text">
+            <h1>Clean Energy. Trusted Supplies. Smarter Future.</h1>
+            <p>From LPG and solar to biogas and boreholes — we power homes, farms, and businesses with affordable, safe, and sustainable energy.</p>
+            <div class="hero-cta">
+                <a href="#" class="btn">Shop Supplies</a>
+                <a href="#" class="btn secondary">Request a Quote</a>
+            </div>
+        </div>
+    </section>
 
-<!-- ===== Hero ===== -->
-<section class="hero">
-  <h1>Clean Energy. Trusted Supplies. Smarter Future.</h1>
-  <p>From LPG and solar to biogas and boreholes — we power homes, farms, and businesses with affordable, safe, and sustainable energy.</p>
-  <div class="hero-buttons">
-    <button class="shop">Shop Supplies</button>
-    <button class="quote">Request a Quote</button>
-  </div>
-</section>
+    <section class="solutions">
+        <h2>Our Green Energy Solutions</h2>
+        <div class="solutions-grid">
+            <div class="card">
+                <img src="assets/lpg-cylinder.jpg" alt="A close-up of an LPG cylinder with a label">
+                <h3>LPG Distribution</h3>
+                <p>Safe refills, reliable delivery.</p>
+                <a href="#" class="btn small">Shop Now</a>
+            </div>
+            <div class="card">
+                <img src="assets/solar-farm.jpg" alt="A solar energy installation">
+                <h3>Solar Energy</h3>
+                <p>Home systems, boreholes & commercial setups.</p>
+                <a href="#" class="btn small">Request Quote</a>
+            </div>
+            <div class="card">
+                <img src="assets/family-cooking-lpg.jpg" alt="A family cooking using a biogas stove">
+                <h3>Biogas Solutions</h3>
+                <p>Clean cooking from farm waste.</p>
+                <a href="#" class="btn small">Learn More</a>
+            </div>
+            <div class="card">
+                <img src="assets/borehole-drilling.jpg" alt="A solar borehole project">
+                <h3>Solar Boreholes</h3>
+                <p>Sustainable water for communities.</p>
+                <a href="#" class="btn small">Explore Solutions</a>
+            </div>
+        </div>
+    </section>
 
-<!-- ===== Interactive Calculator ===== -->
-<section class="calculator">
-  <h2>Estimate Your Savings & CO₂ Impact</h2>
-  <select id="calc-type">
-    <option value="LPG">LPG</option>
-    <option value="Solar">Solar</option>
-    <option value="Borehole">Borehole</option>
-    <option value="Biogas">Biogas</option>
-  </select>
-  <input type="number" id="calc-size" placeholder="Household or Business size">
-  <button onclick="calculate()">Explore My Options</button>
-  <div class="output" id="calc-output"></div>
-</section>
+    <footer class="footer">
+        <p>&copy; 2025 Color Connect Craft. All rights reserved.</p>
+    </footer>
 
-<!-- ===== Solutions Showcase ===== -->
-<section class="solutions">
-  <div class="solution-card">
-    <img src="https://images.unsplash.com/photo-1581092795362-0b86b2b3e08c?auto=format&fit=crop&w=80&q=80" alt="LPG">
-    <h3>LPG Distribution</h3>
-    <p>Safe refills, reliable delivery.</p>
-    <button>Shop Now</button>
-  </div>
-  <div class="solution-card">
-    <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=80&q=80" alt="Solar">
-    <h3>Solar Energy</h3>
-    <p>Home systems, boreholes & commercial setups.</p>
-    <button>Request Quote</button>
-  </div>
-  <div class="solution-card">
-    <img src="https://images.unsplash.com/photo-1581093588401-5cfda0c6d6f4?auto=format&fit=crop&w=80&q=80" alt="Biogas">
-    <h3>Biogas Solutions</h3>
-    <p>Clean cooking from farm waste.</p>
-    <button>Learn More</button>
-  </div>
-  <div class="solution-card">
-    <img src="https://images.unsplash.com/photo-1590031589149-00a7b9e85d99?auto=format&fit=crop&w=80&q=80" alt="Boreholes">
-    <h3>Solar Boreholes</h3>
-    <p>Sustainable water for communities.</p>
-    <button>Explore Solutions</button>
-  </div>
-</section>
-
-<!-- ===== Insights Hub ===== -->
-<section class="insights">
-  <h2>Your Green Energy Knowledge Center</h2>
-  <div class="tiles">
-    <div class="tile">
-      <h4>Solar Boreholes: What Farmers Should Know</h4>
-      <p>Blog article on sustainable water solutions.</p>
-    </div>
-    <div class="tile">
-      <h4>Village Transformed by Biogas Cooking</h4>
-      <p>Case study on community impact.</p>
-    </div>
-    <div class="tile">
-      <h4>Future of LPG Distribution in Africa</h4>
-      <p>Whitepaper on clean energy distribution.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Conversations & Community ===== -->
-<section class="conversations">
-  <h2>Join the Green Energy Conversation</h2>
-  <div class="panels">
-    <div class="panel">
-      <h4>Upcoming Webinar</h4>
-      <p>Biogas for Smallholder Farmers</p>
-      <button>Register</button>
-    </div>
-    <div class="panel">
-      <h4>Community Forum</h4>
-      <p>LPG safety, solar ROI discussions</p>
-      <button>Join Discussion</button>
-    </div>
-    <div class="panel">
-      <h4>Poll</h4>
-      <p>Which solution should expand next in your region?</p>
-      <button>Vote Now</button>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Trust & Safety ===== -->
-<section class="trust">
-  <div class="icon"><img src="https://img.icons8.com/ios-filled/50/1E7F4C/certificate.png"/><span>Certified Installers</span></div>
-  <div class="icon"><img src="https://img.icons8.com/ios-filled/50/1E7F4C/24-hour.png"/><span>24/7 Support</span></div>
-  <div class="icon"><img src="https://img.icons8.com/ios-filled/50/1E7F4C/money.png"/><span>Transparent Pricing</span></div>
-  <div class="icon"><img src="https://img.icons8.com/ios-filled/50/1E7F4C/shield.png"/><span>Safety Guaranteed</span></div>
-</section>
-
-<!-- ===== Customer Stories Carousel ===== -->
-<section class="stories">
-  <h2>Customer Stories</h2>
-  <div class="carousel">
-    <div class="story"><p>“We save $40/month with LPG.” – Amina, Aden</p></div>
-    <div class="story"><p>“Our solar borehole serves 300 households.” – Ali, Lahj</p></div>
-    <div class="story"><p>“Biogas cut our firewood use to zero.” – Mariam, Ta’izz</p></div>
-  </div>
-</section>
-
-<!-- ===== Quote Request Form ===== -->
-<section class="quote-form" id="quote-form">
-  <h2>Request a Quote</h2>
-  <form id="requestQuote">
-    <input type="text" id="qName" placeholder="Full Name" required>
-    <input type="email" id="qEmail" placeholder="Email Address" required>
-    <input type="tel" id="qPhone" placeholder="Phone Number" required>
-    <select id="qSolution" required>
-      <option value="">Select Solution</option>
-      <option value="LPG">LPG</option>
-      <option value="Solar">Solar</option>
-      <option value="Biogas">Biogas</option>
-      <option value="Borehole">Borehole</option>
-    </select>
-    <textarea id="qNotes" placeholder="Project Size / Additional Notes" rows="4"></textarea>
-    <button type="submit">Submit Request</button>
-    <div id="formMessage"></div>
-  </form>
-</section>
-
-<!-- ===== Final CTA ===== -->
-<section class="cta-banner">
-  <h2>Ready to power your future with clean energy?</h2>
-  <button class="shop">Shop Now</button>
-  <button class="quote">Get a Free Quote</button>
-</section>
-
-<!-- ===== Footer ===== -->
-<footer>
-  <p>&copy; 2025 Color Connect Craft. All Rights Reserved.</p>
-  <div>
-    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Safety Notice</a>
-  </div>
-  <div>
-    <input type="email" placeholder="Enter your email">
-    <button>Subscribe</button>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
 
 
